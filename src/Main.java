@@ -1,11 +1,11 @@
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("REVERSE AKINATOR");
-        Fruits.Fruit fruit = fruitToBeGuessed();
+        FruitCategory.Fruit fruit = fruitToBeGuessed();
 
         int lives = 5;
         while (true) {
@@ -16,23 +16,37 @@ public class Main {
 
             String question = chooseQuestion();
             if (question.equals("quit")) break;
-
-            else if (question.equals("answer")) {
-                String answer = scanner.nextLine();
-
-                assert fruit != null;
-                if (answer.equalsIgnoreCase(fruit.getName())) {
-                    System.out.println("Correct! Good job!");
-                    break;
-                } else {
-                    System.out.println("Incorrect! Try again!");
-                    lives--;
-                    System.out.println("Lives left: " + lives);
-                    System.out.println();
-                }
-            }
-            printAnswer(question, fruit);
         }
+    }
+
+    public static FruitCategory.Fruit fruitToBeGuessed() {
+        Random choose = new Random();
+
+        int number = choose.nextInt(5);
+
+        switch (number) {
+            case 0:
+                FruitCategory.Fruit apple = new FruitCategory.Fruit("Apple", FruitCategory.FruitProperties.appleProperties());
+                return apple;
+
+            case 1:
+                FruitCategory.Fruit banana = new FruitCategory.Fruit("Banana", FruitCategory.FruitProperties.bananaProperties());
+                return banana;
+
+            case 2:
+                FruitCategory.Fruit cherry = new FruitCategory.Fruit("Cherry", FruitCategory.FruitProperties.cherryProperties());
+                return cherry;
+
+            case 3:
+                FruitCategory.Fruit grape = new FruitCategory.Fruit("Grapes", FruitCategory.FruitProperties.grapeProperties());
+                return grape;
+
+            case 4:
+                FruitCategory.Fruit kiwi = new FruitCategory.Fruit("Kiwi", FruitCategory.FruitProperties.kiwiProperties());
+                return kiwi;
+        }
+
+        return null;
     }
 
     public static String chooseQuestion() {
@@ -42,59 +56,111 @@ public class Main {
         String[] questions = new String[3];
 
         for (int i = 0; i < 3; i++) {
-            int questionRandom = rand.nextInt(0, 12);
+            int questionRandom = rand.nextInt(26);
 
             switch (questionRandom) {
                 case 0:
-                    questions[i] = "Is the fruit round?";
+                    questions[i] = "Is it round?";
                     break;
 
                 case 1:
-                    questions[i] = "Is the fruit's color red?";
+                    questions[i] = "Is it big?";
                     break;
 
                 case 2:
-                    questions[i] = "Is the fruit's color yellow?";
+                    questions[i] = "Is it small?";
                     break;
 
                 case 3:
-                    questions[i] = "Is the fruit's color orange?";
+                    questions[i] = "Is it sweet?";
                     break;
 
                 case 4:
-                    questions[i] = "Is the fruit's color green?";
+                    questions[i] = "Is it sour?";
                     break;
 
                 case 5:
-                    questions[i] = "Is the fruit heavy?";
+                    questions[i] = "Is it light?";
                     break;
 
                 case 6:
-                    questions[i] = "Is the fruit light?";
+                    questions[i] = "Is it heavy?";
                     break;
 
                 case 7:
-                    questions[i] = "Is the fruit big?";
+                    questions[i] = "Is the outside red?";
                     break;
 
                 case 8:
-                    questions[i] = "Is the fruit small?";
+                    questions[i] = "Is the outside orange?";
                     break;
 
                 case 9:
-                    questions[i] = "Is the fruit sweet?";
+                    questions[i] = "Is the outside yellow?";
                     break;
 
                 case 10:
-                    questions[i] = "Is the fruit sour?";
+                    questions[i] = "Is the outside green?";
                     break;
 
                 case 11:
-                    questions[i] = "Can the fruit be eaten with its skin on?";
+                    questions[i] = "Is the outside white?";
                     break;
 
                 case 12:
-                    questions[i] = "Is the fruit commonly associated with a holiday?";
+                    questions[i] = "Is the inside red?";
+                    break;
+
+                case 13:
+                    questions[i] = "Is the inside orange?";
+                    break;
+
+                case 14:
+                    questions[i] = "Is the inside yellow?";
+                    break;
+
+                case 15:
+                    questions[i] = "Is the inside green?";
+                    break;
+
+                case 16:
+                    questions[i] = "Is the inside white?";
+                    break;
+
+                case 17:
+                    questions[i] = "Is it expensive?";
+                    break;
+
+                case 18:
+                    questions[i] = "Is it soft?";
+                    break;
+
+                case 19:
+                    questions[i] = "Is the outside hard?";
+                    break;
+
+                case 20:
+                    questions[i] = "Is the outside soft?";
+                    break;
+
+                case 21:
+                    questions[i] = "Is the inside hard?";
+                    break;
+
+                case 22:
+                    questions[i] = "Is the inside soft?";
+                    break;
+
+                case 23:
+                    questions[i] = "Do you eat the seeds?";
+                    break;
+
+                case 24:
+                    questions[i] = "Does it have many seeds?";
+                    break;
+
+                case 25:
+                    questions[i] = "Do you eat the skin?";
                     break;
             }
         }
@@ -115,103 +181,7 @@ public class Main {
         }
     }
 
-    private static void printAnswer(String question, Fruits.Fruit fruit) {
-        switch (question) {
-            case "Is the fruit round?":
-                System.out.println(question + " " + (fruit.getProperties().isRound ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit's color red?":
-                System.out.println(question + " " + (fruit.getProperties().isColorRed ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit's color yellow?":
-                System.out.println(question + " " + (fruit.getProperties().isColorYellow ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit's color orange?":
-                System.out.println(question + " " + (fruit.getProperties().isColorOrange ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit's color green?":
-                System.out.println(question + " " + (fruit.getProperties().isColorGreen ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit heavy?":
-                System.out.println(question + " " + (fruit.getProperties().isHeavy ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit light?":
-                System.out.println(question + " " + (fruit.getProperties().isLight ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit big?":
-                System.out.println(question + " " + (fruit.getProperties().isBig ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit small?":
-                System.out.println(question + " " + (fruit.getProperties().isSmall ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit sweet?":
-                System.out.println(question + " " + (fruit.getProperties().isSweet ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit sour?":
-                System.out.println(question + " " + (fruit.getProperties().isSour ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Can the fruit be eaten with its skin on?":
-                System.out.println(question + " " + (fruit.getProperties().isEatenWithSkinOn ? "Yes" : "No"));
-                System.out.println();
-                break;
-
-            case "Is the fruit commonly associated with a holiday?":
-                System.out.println(question + " " + (fruit.getProperties().isAssociatedWithHoliday ? "Yes" : "No"));
-                System.out.println();
-                break;
-        }
-    }
-
-    public static Fruits.Fruit fruitToBeGuessed() {
-        Random choose = new Random();
-
-        int number = choose.nextInt(0, 4);
-
-        switch(number) {
-            case 0:
-                Fruits.Fruit apple = new Fruits.Fruit("Apple", Fruits.FruitPropertiesFactory.createAppleProperties());
-                return apple;
-
-            case 1:
-                Fruits.Fruit orange = new Fruits.Fruit("Orange", Fruits.FruitPropertiesFactory.createOrangeProperties());
-                return orange;
-
-            case 2:
-                Fruits.Fruit banana = new Fruits.Fruit("Banana" , Fruits.FruitPropertiesFactory.createBananaProperties());
-                return banana;
-
-            case 3:
-                Fruits.Fruit watermelon = new Fruits.Fruit("Watermelon", Fruits.FruitPropertiesFactory.createWatermelonProperties());
-                return watermelon;
-
-            case 4:
-                Fruits.Fruit mango = new Fruits.Fruit("Mango", Fruits.FruitPropertiesFactory.createMangoProperties());
-                return mango;
-
-        }
-
-        return null;
+    private static void printAnswer(String question, FruitCategory.Fruit fruit) {
+        return;
     }
 }
