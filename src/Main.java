@@ -5,17 +5,50 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("REVERSE AKINATOR");
+
+        // Choose a random fruit
         FruitCategory.Fruit fruit = fruitToBeGuessed();
 
+        // Total lives
         int lives = 5;
+
+        // Game loop
         while (true) {
+
+            // If lives reach 0, it's game over!
             if (lives == 0) {
                 System.out.println("Game Over!");
                 break;
             }
 
+            // Choose from 3 questions, in which the console will answer
             String question = chooseQuestion();
+
+            // If user chose to quit, exit the program
             if (question.equals("quit")) break;
+
+            // If user chose to answer, lets the user type what they think the answer is
+            else if (question.equals("answer")) {
+                System.out.print("Your Answer: ");
+                String answer = input.nextLine();
+
+                // If it's correct, good job!
+                assert fruit != null;
+                if (answer.equalsIgnoreCase(fruit.getName())) {
+                    System.out.println("Correct! Good job!");
+                    break;
+
+                    // If it's incorrect, reduce lives by one. Try again!
+                } else {
+                    System.out.println("Incorrect! Try again!");
+                    lives--;
+                    System.out.println("Lives left: " + lives);
+                    System.out.println();
+                }
+            }
+
+            // Otherwise, print the answer of the question the user chose
+            printAnswer(question, fruit);
         }
     }
 
@@ -182,6 +215,144 @@ public class Main {
     }
 
     private static void printAnswer(String question, FruitCategory.Fruit fruit) {
-        return;
+        switch (question) {
+            case "Is the fruit round?":
+                System.out.println(question + " " + answer(fruit.getProperties().isRound));
+                System.out.println();
+                break;
+
+            case "Is it big?":
+                System.out.println(question + " " + answer(fruit.getProperties().isBig));
+                System.out.println();
+                break;
+
+            case "Is it small?":
+                System.out.println(question + " " + answer(fruit.getProperties().isSmall));
+                System.out.println();
+                break;
+
+            case "Is it sweet?":
+                System.out.println(question + " " + answer(fruit.getProperties().isSweet));
+                System.out.println();
+                break;
+
+            case "Is it sour?":
+                System.out.println(question + " " + answer(fruit.getProperties().isSour));
+                System.out.println();
+                break;
+
+            case "Is it light?":
+                System.out.println(question + " " + answer(fruit.getProperties().isLight));
+                System.out.println();
+                break;
+
+            case "Is it heavy?":
+                System.out.println(question + " " + answer(fruit.getProperties().isHeavy));
+                System.out.println();
+                break;
+
+            case "Is the outside red?":
+                System.out.println(question + " " + answer(fruit.getProperties().isOutsideRed));
+                System.out.println();
+                break;
+
+            case "Is the outside orange?":
+                System.out.println(question + " " + answer(fruit.getProperties().isOutsideOrange));
+                System.out.println();
+                break;
+
+            case "Is the outside yellow?":
+                System.out.println(question + " " + answer(fruit.getProperties().isOutsideYellow));
+                System.out.println();
+                break;
+
+            case "Is the outside green?":
+                System.out.println(question + " " + answer(fruit.getProperties().isOutsideGreen));
+                System.out.println();
+                break;
+
+            case "Is the outside white?":
+                System.out.println(question + " " + answer(fruit.getProperties().isOutsideWhite));
+                System.out.println();
+                break;
+
+            case "Is the inside red?":
+                System.out.println(question + " " + answer(fruit.getProperties().isInsideRed));
+                System.out.println();
+                break;
+
+            case "Is the inside orange?":
+                System.out.println(question + " " + answer(fruit.getProperties().isInsideOrange));
+                System.out.println();
+                break;
+
+            case "Is the inside yellow?":
+                System.out.println(question + " " + answer(fruit.getProperties().isInsideYellow));
+                System.out.println();
+                break;
+
+            case "Is the inside green?":
+                System.out.println(question + " " + answer(fruit.getProperties().isInsideGreen));
+                System.out.println();
+                break;
+
+            case "Is the inside white?":
+                System.out.println(question + " " + answer(fruit.getProperties().isInsideWhite));
+                System.out.println();
+                break;
+
+            case "Is it expensive?":
+                System.out.println(question + " " + answer(fruit.getProperties().isExpensive));
+                System.out.println();
+                break;
+
+            case "Is it soft?":
+                System.out.println(question + " " + answer(fruit.getProperties().isSoft));
+                System.out.println();
+                break;
+
+            case "Is the outside hard?":
+                System.out.println(question + " " + answer(fruit.getProperties().isOutsideHard));
+                System.out.println();
+                break;
+
+            case "Is the outside soft?":
+                System.out.println(question + " " + answer(fruit.getProperties().isOutsideSoft));
+                System.out.println();
+                break;
+
+            case "Is the inside hard?":
+                System.out.println(question + " " + answer(fruit.getProperties().isInsideHard));
+                System.out.println();
+                break;
+
+            case "Is the inside soft?":
+                System.out.println(question + " " + answer(fruit.getProperties().isInsideSoft));
+                System.out.println();
+                break;
+
+            case "Do you eat the seeds?":
+                System.out.println(question + " " + answer(fruit.getProperties().areSeedsEaten));
+                System.out.println();
+                break;
+
+            case "Does it have many seeds?":
+                System.out.println(question + " " + answer(fruit.getProperties().hasManySeeds));
+                System.out.println();
+                break;
+
+            case "Do you eat the skin?":
+                System.out.println(question + " " + answer(fruit.getProperties().isSkinEaten));
+                System.out.println();
+                break;
+        }
+    }
+
+    public static String answer(int ans) {
+        if (ans == 1) return "Yes";
+        else if (ans == 2) return "Somewhat yes";
+        else if (ans == 3) return "Neutral";
+        else if (ans == 4) return "Somewhat no";
+        else return "No";
     }
 }
