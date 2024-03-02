@@ -1,9 +1,8 @@
 package Fruit;
 
-public class Cherry extends Fruit {
-
-    public Cherry() {
-        super("cherry");
+public class Kiwi extends Fruit {
+    public Kiwi() {
+        super("kiwi");
     }
 
     public String getName() {
@@ -23,11 +22,11 @@ public class Cherry extends Fruit {
     }
 
     public String isSweet() {
-        return "Yes";
+        return "Somewhat yes";
     }
 
     public String isSour() {
-        return "Neutral";
+        return "Somewhat yes";
     }
 
     public String isLight() {
@@ -39,7 +38,7 @@ public class Cherry extends Fruit {
     }
 
     public String isOutsideRed() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideOrange() {
@@ -51,7 +50,7 @@ public class Cherry extends Fruit {
     }
 
     public String isOutsideGreen() {
-        return "No";
+        return "Yes";
     }
 
     public String isOutsideWhite() {
@@ -59,7 +58,7 @@ public class Cherry extends Fruit {
     }
 
     public String isInsideRed() {
-        return "Yes";
+        return "No";
     }
 
     public String isInsideOrange() {
@@ -71,11 +70,11 @@ public class Cherry extends Fruit {
     }
 
     public String isInsideGreen() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideWhite() {
-        return "No";
+        return "Somewhat yes";
     }
 
     public String isExpensive() {
@@ -83,15 +82,15 @@ public class Cherry extends Fruit {
     }
 
     public String isSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideHard() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideSoft() {
@@ -103,7 +102,7 @@ public class Cherry extends Fruit {
     }
 
     public String seedsEaten() {
-        return "No";
+        return "Yes";
     }
 
     public String hasManySeeds() {
@@ -111,6 +110,6 @@ public class Cherry extends Fruit {
     }
 
     public String skinEaten() {
-        return "Yes";
+        return "No";
     }
 }

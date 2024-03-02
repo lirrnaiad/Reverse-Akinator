@@ -1,14 +1,13 @@
 package Fruit;
 
 public class Apple extends Fruit {
-    private final String name;
 
     public Apple() {
-        this.name = "apple";
+        super("apple");
     }
 
     public String getName() {
-        return this.name;
+        return super.getName();
     }
 
     public String isRound() {
@@ -28,7 +27,7 @@ public class Apple extends Fruit {
     }
 
     public String isSour() {
-        return "Yes";
+        return "No";
     }
 
     public String isLight() {

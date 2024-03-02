@@ -1,9 +1,8 @@
 package Fruit;
 
-public class Cherry extends Fruit {
-
-    public Cherry() {
-        super("cherry");
+public class Lime extends Fruit {
+    public Lime() {
+        super("lime");
     }
 
     public String getName() {
@@ -11,7 +10,7 @@ public class Cherry extends Fruit {
     }
 
     public String isRound() {
-        return "Yes";
+        return "Somewhat yes";
     }
 
     public String isBig() {
@@ -23,11 +22,11 @@ public class Cherry extends Fruit {
     }
 
     public String isSweet() {
-        return "Yes";
+        return "No";
     }
 
     public String isSour() {
-        return "Neutral";
+        return "Yes";
     }
 
     public String isLight() {
@@ -39,7 +38,7 @@ public class Cherry extends Fruit {
     }
 
     public String isOutsideRed() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideOrange() {
@@ -51,7 +50,7 @@ public class Cherry extends Fruit {
     }
 
     public String isOutsideGreen() {
-        return "No";
+        return "Yes";
     }
 
     public String isOutsideWhite() {
@@ -59,7 +58,7 @@ public class Cherry extends Fruit {
     }
 
     public String isInsideRed() {
-        return "Yes";
+        return "No";
     }
 
     public String isInsideOrange() {
@@ -71,7 +70,7 @@ public class Cherry extends Fruit {
     }
 
     public String isInsideGreen() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideWhite() {
@@ -79,19 +78,19 @@ public class Cherry extends Fruit {
     }
 
     public String isExpensive() {
-        return "Yes";
+        return "No";
     }
 
     public String isSoft() {
-        return "Yes";
+        return "Somewhat yes";
     }
 
     public String isOutsideSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideHard() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideSoft() {
@@ -111,6 +110,6 @@ public class Cherry extends Fruit {
     }
 
     public String skinEaten() {
-        return "Yes";
+        return "No";
     }
 }

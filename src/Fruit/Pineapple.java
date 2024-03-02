@@ -1,9 +1,8 @@
 package Fruit;
 
-public class Cherry extends Fruit {
-
-    public Cherry() {
-        super("cherry");
+public class Pineapple extends Fruit {
+    public Pineapple() {
+        super("pineapple");
     }
 
     public String getName() {
@@ -11,15 +10,15 @@ public class Cherry extends Fruit {
     }
 
     public String isRound() {
-        return "Yes";
+        return "Somewhat yes";
     }
 
     public String isBig() {
-        return "No";
+        return "Yes";
     }
 
     public String isSmall() {
-        return "Yes";
+        return "No";
     }
 
     public String isSweet() {
@@ -27,19 +26,19 @@ public class Cherry extends Fruit {
     }
 
     public String isSour() {
-        return "Neutral";
-    }
-
-    public String isLight() {
-        return "Yes";
-    }
-
-    public String isHeavy() {
         return "No";
     }
 
-    public String isOutsideRed() {
+    public String isLight() {
+        return "No";
+    }
+
+    public String isHeavy() {
         return "Yes";
+    }
+
+    public String isOutsideRed() {
+        return "No";
     }
 
     public String isOutsideOrange() {
@@ -47,11 +46,11 @@ public class Cherry extends Fruit {
     }
 
     public String isOutsideYellow() {
-        return "No";
+        return "Yes";
     }
 
     public String isOutsideGreen() {
-        return "No";
+        return "Yes";
     }
 
     public String isOutsideWhite() {
@@ -59,7 +58,7 @@ public class Cherry extends Fruit {
     }
 
     public String isInsideRed() {
-        return "Yes";
+        return "No";
     }
 
     public String isInsideOrange() {
@@ -67,7 +66,7 @@ public class Cherry extends Fruit {
     }
 
     public String isInsideYellow() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideGreen() {
@@ -83,15 +82,15 @@ public class Cherry extends Fruit {
     }
 
     public String isSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideHard() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideSoft() {
@@ -107,10 +106,10 @@ public class Cherry extends Fruit {
     }
 
     public String hasManySeeds() {
-        return "No";
+        return "Yes";
     }
 
     public String skinEaten() {
-        return "Yes";
+        return "No";
     }
 }

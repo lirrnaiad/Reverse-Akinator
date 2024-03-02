@@ -1,9 +1,8 @@
 package Fruit;
 
-public class Cherry extends Fruit {
-
-    public Cherry() {
-        super("cherry");
+public class Lemon extends Fruit {
+    public Lemon() {
+        super("lemon");
     }
 
     public String getName() {
@@ -11,7 +10,7 @@ public class Cherry extends Fruit {
     }
 
     public String isRound() {
-        return "Yes";
+        return "Somewhat yes";
     }
 
     public String isBig() {
@@ -23,11 +22,11 @@ public class Cherry extends Fruit {
     }
 
     public String isSweet() {
-        return "Yes";
+        return "No";
     }
 
     public String isSour() {
-        return "Neutral";
+        return "Yes";
     }
 
     public String isLight() {
@@ -39,7 +38,7 @@ public class Cherry extends Fruit {
     }
 
     public String isOutsideRed() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideOrange() {
@@ -47,7 +46,7 @@ public class Cherry extends Fruit {
     }
 
     public String isOutsideYellow() {
-        return "No";
+        return "Yes";
     }
 
     public String isOutsideGreen() {
@@ -59,7 +58,7 @@ public class Cherry extends Fruit {
     }
 
     public String isInsideRed() {
-        return "Yes";
+        return "No";
     }
 
     public String isInsideOrange() {
@@ -67,7 +66,7 @@ public class Cherry extends Fruit {
     }
 
     public String isInsideYellow() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideGreen() {
@@ -79,19 +78,19 @@ public class Cherry extends Fruit {
     }
 
     public String isExpensive() {
-        return "Yes";
+        return "No";
     }
 
     public String isSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideHard() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideSoft() {
@@ -107,10 +106,10 @@ public class Cherry extends Fruit {
     }
 
     public String hasManySeeds() {
-        return "No";
+        return "Yes";
     }
 
     public String skinEaten() {
-        return "Yes";
+        return "No";
     }
 }

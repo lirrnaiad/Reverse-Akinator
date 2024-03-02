@@ -1,11 +1,11 @@
 package Fruit;
 
-public class Cherry extends Fruit {
-
-    public Cherry() {
-        super("cherry");
+public class Watermelon extends Fruit {
+    public Watermelon() {
+        super("watermelon");
     }
 
+    @Override
     public String getName() {
         return super.getName();
     }
@@ -15,11 +15,11 @@ public class Cherry extends Fruit {
     }
 
     public String isBig() {
-        return "No";
+        return "Yes";
     }
 
     public String isSmall() {
-        return "Yes";
+        return "No";
     }
 
     public String isSweet() {
@@ -27,19 +27,19 @@ public class Cherry extends Fruit {
     }
 
     public String isSour() {
-        return "Neutral";
-    }
-
-    public String isLight() {
-        return "Yes";
-    }
-
-    public String isHeavy() {
         return "No";
     }
 
-    public String isOutsideRed() {
+    public String isLight() {
+        return "No";
+    }
+
+    public String isHeavy() {
         return "Yes";
+    }
+
+    public String isOutsideRed() {
+        return "No";
     }
 
     public String isOutsideOrange() {
@@ -51,7 +51,7 @@ public class Cherry extends Fruit {
     }
 
     public String isOutsideGreen() {
-        return "No";
+        return "Yes";
     }
 
     public String isOutsideWhite() {
@@ -83,15 +83,15 @@ public class Cherry extends Fruit {
     }
 
     public String isSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideSoft() {
-        return "Yes";
+        return "No";
     }
 
     public String isOutsideHard() {
-        return "No";
+        return "Yes";
     }
 
     public String isInsideSoft() {
@@ -103,14 +103,14 @@ public class Cherry extends Fruit {
     }
 
     public String seedsEaten() {
-        return "No";
+        return "Somewhat no";
     }
 
     public String hasManySeeds() {
-        return "No";
+        return "Yes";
     }
 
     public String skinEaten() {
-        return "Yes";
+        return "No";
     }
 }

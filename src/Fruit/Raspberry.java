@@ -1,9 +1,8 @@
 package Fruit;
 
-public class Cherry extends Fruit {
-
-    public Cherry() {
-        super("cherry");
+public class Raspberry extends Fruit {
+    public Raspberry() {
+        super("raspberry");
     }
 
     public String getName() {
@@ -11,7 +10,7 @@ public class Cherry extends Fruit {
     }
 
     public String isRound() {
-        return "Yes";
+        return "No";
     }
 
     public String isBig() {
@@ -27,7 +26,7 @@ public class Cherry extends Fruit {
     }
 
     public String isSour() {
-        return "Neutral";
+        return "No";
     }
 
     public String isLight() {
@@ -103,11 +102,11 @@ public class Cherry extends Fruit {
     }
 
     public String seedsEaten() {
-        return "No";
+        return "Yes";
     }
 
     public String hasManySeeds() {
-        return "No";
+        return "Yes";
     }
 
     public String skinEaten() {
